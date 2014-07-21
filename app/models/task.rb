@@ -6,7 +6,6 @@ class Task < ActiveRecord::Base
   scope :incomplete, -> { where(completed: false) }
 
   def param_parts
-    [task_list, task_list]
+    [task_list, self.id]
   end
-
 end
